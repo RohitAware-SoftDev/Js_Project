@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+
+body{
+   background-image: linear-gradient(to top left,#753682,#bf2e34 100%);
+   height: 100vh;
+   color: #222;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+     font-weight: 400
+}
+
+/* Working Layout */
+main{
+    position: relative;
+    width: 100rem;
+    height: 60rem;
+    /* border: 1px solid black; */
+    display: flex;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(200px);
+    border-radius: 9px;
+    box-shadow: 0.3rem 5remrgba(0, 0, 0, 0.25);
+}
+
+.player{
+    flex: 50%;
+    padding: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.75s;
+}
+
+.name{
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    word-spacing: 2rem;
+    font-size: 5rem;
+    font-weight: 300;
+    /* color:#c7365f; */
+    margin-bottom: 1rem;
+}
+
+.score{
+    margin-bottom: auto;
+    font-size: 8rem;
+    font-weight: 300;
+    color: #c7365f;
+}
+
+.current{
+    background-color: #c7365f;
+    opacity: 0.8;
+    width: 65%;
+    /* height: 25%; */
+    text-align: center;
+    padding:2rem;
+    border-radius: 9px;
+    color: #fff;
+    transition: all 0.75s;
+}
+.current-lable{
+  font-size: 2rem;
+}
+.current-score {
+  font-size: 4rem;
+}
+
+.player--active{
+    background-color: rgba(255, 255, 255, 0.4);
+} 
+
+.player--active .name {
+  font-weight: 500;
+}
+.player--active .score {
+  font-weight: 400;
+}
+.player--active .current {
+  opacity: 1;
+}
+
+/* Now button thats are we kept commented make them center like using absolute positioning */
+
+.btn{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: white;
+  color: #444;
+  border: none ;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 0.7rem 2rem;
+  border-radius: 50rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+
+}
+
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+} 
+
+.btn:hover {
+    background-color: #ccc;
+}
+
+.btn::first-letter {
+  font-size: 2.4rem;
+  display: inline-block;
+  margin-right: 0.7rem;
+  text-align: center;
+}
+
+
+.btn--hold{
+    top: 49rem;
+}
+.btn--roll{
+    top: 40rem;
+}
+.btn--new{
+    top: 2.5rem;
+}
+.btn:focus {
+  outline: none;
+}
+
+
+.dice{
+  position: absolute;
+  left: 50%;
+  top: 15rem;
+  transform: translateX(-50%);
+  height: 8rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+
+.player--winner {
+  background-color: #fcf96f;
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
+
+/* ! Making the Dice hidden and make it appear when roll dice button got clicked */
+.hidden{
+  display: none;
+}
